@@ -1,0 +1,274 @@
+* {
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+button {
+    color: aliceblue;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    cursor: pointer;
+    font-size: 15px;
+   
+}
+#image1{
+    border-radius: 50%;
+    width: 350px;
+    height: 400px;
+    margin-top: 30px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    position: absolute; /* Positioning relative to its parent */
+    top: 60%; /* Position vertically in the center */
+    left: 50%; /* Position horizontally in the center */
+    transform: translate(-60%, -50%); /* Center the image perfectly */
+    opacity: 0; /* Initially, set the opacity to 0 (invisible) */
+    transition: opacity 1s ease-in-out; /* Smooth opacity transition */
+}
+
+.animated-image {
+    animation: moveLeft 2s ease-in-out forwards; /* Run animation for 2 seconds */
+  }
+
+.nav {
+    border-bottom: 2px solid transparent;
+    position: relative;
+}
+
+.nav:hover {
+    border-color: #ffffff;
+}
+.nav::after {
+    content:"";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav:hover::after {
+    width:auto; 
+}
+
+.navigation {
+    margin-left: 68%;
+    margin-top: 70px;
+    margin-bottom: 15px;;
+}
+
+header {
+    animation: slideUp 1.5s ease-in-out;
+    height: 660px;
+}
+
+header h1 {
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+body {
+    max-width: 100%;
+    background-color: #295a65;
+}
+
+.section h1 {
+    font-size: 1.9rem;
+    text-align: left;
+    margin-left: 50px;
+}
+
+#MyIntroduction {
+    background-color: #6d6ea0;
+    margin: 0px;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    font-size: 1.3rem;
+    height:800px;
+}
+
+#MySkills {
+    background-color: #A69CA1;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    font-size: 1.3rem;
+    height:800px;
+}
+
+#Projects {
+    background-color: #C6AFAF;
+    padding-top: 3%;
+    padding-bottom: 7%;
+    font-size: 1.3rem;
+}
+
+#projects {
+    padding: 60px 0;
+}
+
+.project-cards {
+    display: grid;
+    width: 400px;
+    align-items: center;
+    margin-left:35%;
+
+}
+
+.project-card img {
+    width: 65%;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project-card p {
+    font-size: 1rem;
+}
+
+.project-card {
+    background-color: #E2CDCD;
+    padding: 30px;
+    border-radius: 5px;
+    align-content: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+#Contact {
+    background-color: #b095a1;
+    padding-top: 5%;
+    font-size: 1.3rem;
+}
+
+#submission {
+    border-style: solid;
+    background-color: rgb(110, 168, 190);
+    border-radius: 20px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left:4%;
+}
+
+#submission:hover{
+    background-color: rgb(112, 224, 224);
+}
+
+form input,
+form textarea {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+form{
+    margin-top: 50px;
+    margin-bottom:75px;
+}
+
+#message {
+    width: 107%;
+    padding-right: 8.3%;
+}
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 20px;;
+}
+.icon{
+    margin:0.7%;
+}
+a{
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+      transform: translate(-50%, -50%) translateX(0); /* Start at the center */
+      opacity: 0; /* Initially invisible */
+    }
+    100% {
+      transform: translate(-50%, -50%) translateX(-500px); /* Move left */
+      opacity: 1; /* Make the image fully visible */
+    }
+  }
+
+  .animated-text {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: white;
+    text-align: center; /* Center the text horizontally */
+    overflow: hidden; /* Hide the text that is not yet typed */
+    white-space: nowrap; /* Ensure text stays in a single line */
+    width: 0; /* Start with zero width */
+    position: absolute; /* Position it centrally on the screen */
+    top: 50%; /* Vertically center the text */
+    left: 53%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Center the element perfectly */
+    animation: typing 4s steps(30) 2s forwards, blink 0.75s step-end infinite 6s; /* Apply typing and cursor blinking effects */
+  }
+  
+  /* Keyframe for typing animation */
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%; /* Full width of the text */
+    }
+  }
+  
+  /* Keyframe for the blinking cursor effect */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
